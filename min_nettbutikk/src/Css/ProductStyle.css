@@ -1,0 +1,32 @@
+
+.product-list {
+    display: flex;
+    gap: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+  }
+
+  .product-list h3{
+    font-weight: lighter;
+  }
+  
+  .product-card {
+    border: 1px solid #804a00;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 14rem;
+    height: 16rem;
+    color:#f4e8b3;
+    cursor: pointer;
+  }
+  
+  .product-card img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 0.2rem;
+  }
+  
+  .product-card h3 {
+    margin: 10px 0;
+  }
