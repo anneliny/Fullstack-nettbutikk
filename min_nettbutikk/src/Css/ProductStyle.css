@@ -30,3 +30,38 @@
   .product-card h3 {
     margin: 10px 0;
   }
+
+  .pd-container {
+    display: flex;
+    gap: 6rem;
+    
+  }
+
+  .pd-img {
+    width: 25rem;
+    height: 25rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    border: 1px solid #804a00;
+
+  }
+
+  .pd-text {
+    color:#f4e8b3;
+    width: 20rem;
+    height: 10rem;
+    margin-top: 4rem;
+  }
+
+  .pd-text h2{
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pd-text div {
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+  }
