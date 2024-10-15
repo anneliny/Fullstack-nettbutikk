@@ -2,40 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../Css/ProductStyle.css';
 
-function ProductDetails() {
+function ProductDetails({addToCart}) {
   const { product_id } = useParams();
   const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${product_id}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Product not found');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setProduct(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/api/products/${product_id}`);
+        const productData = await response.json();
+        setProduct(productData);
+      } catch (error) {
+        console.error('Error fetching product details:', error);
+      }
+    };
+
+    fetchProduct();
   }, [product_id]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>{error}</p>;
-  }
   if (!product) {
-    return <p>Product not found</p>;
-    
+    return <div>Loading...</div>;
   }
 
   return (
@@ -46,7 +32,7 @@ function ProductDetails() {
       <h2 >{product.product_name}</h2>
       <div>{product.product_description}</div>
       <div>{product.product_price} kr</div>
-      
+      <button onClick={()=> addToCart(product)}>Legg til i handlekurv</button>
       </div>
       </div>
       </>

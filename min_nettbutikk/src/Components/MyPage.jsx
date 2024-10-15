@@ -1,9 +1,10 @@
+import React from "react";
 import LoginSignup from "./LoginSignup";
 
-function MyPage(){
+function MyPage({setIsLoggedIn}){
     return (
         <>
-        <LoginSignup/>
+        <LoginSignup setIsLoggedIn={setIsLoggedIn}/>
         </>
     )
 }

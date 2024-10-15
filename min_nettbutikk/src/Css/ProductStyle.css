@@ -11,14 +11,15 @@
   }
   
   .product-card {
-    border: 1px solid #804a00;
-    padding: 20px;
-    border-radius: 8px;
+    border: 1px solid #0c0704;
+    padding: 1.2rem;
+    border-radius: 0.2rem;
     text-align: center;
     width: 14rem;
     height: 16rem;
     color:#f4e8b3;
     cursor: pointer;
+    background-color:#160e0a;
   }
   
   .product-card img {
@@ -40,23 +41,28 @@
   .pd-img {
     width: 25rem;
     height: 25rem;
-    cursor: pointer;
     border-radius: 0.2rem;
-    border: 1px solid #804a00;
-
+    border: 1px solid #0c0704;
+    background-color:#160e0a;
   }
 
   .pd-text {
+    display: grid;
+    justify-content: center;
     color:#f4e8b3;
     width: 20rem;
-    height: 10rem;
+    height: 17rem;
     margin-top: 4rem;
+    background-color:#160e0a;
+    border-radius: 0.2rem;
+    border: 1px solid #0c0704;
   }
 
   .pd-text h2{
     font-weight: lighter;
     display: flex;
     justify-content: center;
+    background-color:#160e0a;
   }
 
   .pd-text div {
@@ -64,4 +70,19 @@
     display: flex;
     justify-content: center;
     padding: 3rem;
+  }
+
+  .pd-text button {
+    margin: 0 auto;
+    display: block;
+  cursor: pointer;
+  background-color:#160e0a;
+  color: #f4e8b3;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:medium;
+  font-weight:lighter;
+  border-radius: 0.3rem;
+  border: solid 0.01rem #0c0704;
+  padding: 0.5rem;
+  width: 10rem;
   }

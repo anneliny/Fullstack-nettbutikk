@@ -1,0 +1,13 @@
+
+.myPage-btn {
+    margin: 0.5rem;
+    cursor: pointer;
+    background-color:#160e0a;
+    color: #f4e8b3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:medium;
+    font-weight:lighter;
+    border-radius: 0.3rem;
+    border: solid 0.01rem #0c0704;
+    padding: 0.4rem;
+}
