@@ -24,6 +24,31 @@ db.connect(err => {
   console.log('Koblet til MySQL');
 });
 
+app.get('/api/products/category/:category', (req, res) => {
+  const { category } = req.params;
+  const sql = 'SELECT * FROM products WHERE product_category = ?';
+
+  db.query(sql, [category], (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    if (results.length === 0) {
+      return res.status(404).json({ message: 'Ingen produkter funnet for denne kategorien' });
+    }
+    res.json(results);
+  });
+});
+
+app.get('/api/categories', (req, res) => {
+  const sql = 'SELECT DISTINCT product_category AS name FROM products'; 
+  db.query(sql, (err, results) => {
+      if (err) {
+          return res.status(500).json({ error: err.message });
+      }
+      res.json(results);
+  });
+});
+
 app.get('/api/products', (req, res) => {
   const sql = 'SELECT * FROM products';
   db.query(sql, (err, results) => {

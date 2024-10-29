@@ -9,6 +9,7 @@ import ProductDetails from './Components/ProductDetails.jsx';
 import MyPageLoggedIn from './Components/MyPageLoggedIn.jsx';
 import ProtectedRoute from './Components/ProtectedRoute.jsx';
 import ShoppingCart from './Components/ShoppingCart.jsx';
+import ProductList from './Components/ProductList.jsx';
 
 function App() {
   document.title = "Floke & Flora";
@@ -30,16 +31,14 @@ function App() {
       <div className="App">
       <Link to="/" className="link-no-underline">
         <div className="header-container">
-            <h1 className='header-app'>Floke & Flora</h1>
+            <h1 className='header-app'>- Floke & Flora -</h1>
             </div>
           </Link>
         <nav className="topNav">
-
           <div className='navLeft'>
             <Link to="/produkter">
               <button className="navBtn">Produkter</button>
             </Link>
-
             {isLoggedIn ? (
               <Link to="/min-side-innlogget">
               <button className="navBtn">Min side</button>
@@ -49,9 +48,7 @@ function App() {
               <button className="navBtn">Min side</button>
               </Link> 
             )}
-
           </div>
-          
           <div className='navRight'>
             <input type="Search" name="inputSearch" />
             <button className="navBtn">Søk</button>
@@ -65,11 +62,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/produkter" element={<Products />} />
+            <Route path="/produkter/kategorier/:category" element={<ProductList />} />
             <Route path="/produkter/:product_id" element={<ProductDetails addToCart={addToCart} />} />
             <Route path="/min-side" element={<MyPage setIsLoggedIn={setIsLoggedIn} />} />
             <Route path="/om-meg" element={<AboutMe />} />
             <Route path="/min-side-innlogget" element={<ProtectedRoute isLoggedIn={isLoggedIn}><MyPageLoggedIn setIsLoggedIn={setIsLoggedIn} /></ProtectedRoute>} />
-            <Route path="/handlekurv" element={<ShoppingCart cart={cart}/>} />
+            <Route path="/handlekurv" element={<ShoppingCart cart={cart} setCart={setCart}/>} />
           </Routes>
         </div>
 

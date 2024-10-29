@@ -1,3 +1,31 @@
+.category-card {
+  border: double 0.3rem #0c0704;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 10rem;
+  color:#8e4212;
+  cursor: pointer;
+  background-color: #22140b85;
+  margin: 2.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
+}
+
+.category-card:hover {
+  background-color: #43210e72;
+}
+
+.category-card div {
+  display: grid;
+  justify-items: center;
+  padding-top: 40%;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+
+}
 
 .product-list {
     display: flex;
@@ -11,15 +39,20 @@
   }
   
   .product-card {
-    border: 1px solid #0c0704;
+    border: double 0.3rem #0c0704;
     padding: 1.2rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     text-align: center;
     width: 14rem;
     height: 16rem;
-    color:#f4e8b3;
+    color:#8e4212;
     cursor: pointer;
-    background-color:#160e0a;
+    background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
+  }
+
+  .product-card:hover {
+    background-color: #43210e72;
   }
   
   .product-card img {
@@ -41,28 +74,29 @@
   .pd-img {
     width: 25rem;
     height: 25rem;
-    border-radius: 0.2rem;
-    border: 1px solid #0c0704;
-    background-color:#160e0a;
+    border-radius: 0.5rem;
+    border: double 0.3rem #0c0704;
+    background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
   }
 
   .pd-text {
     display: grid;
     justify-content: center;
-    color:#f4e8b3;
+    color:#8e4212;
     width: 20rem;
     height: 17rem;
     margin-top: 4rem;
-    background-color:#160e0a;
-    border-radius: 0.2rem;
-    border: 1px solid #0c0704;
+    background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
+    border-radius: 0.5rem;
+    border: double 0.3rem #0c0704;
   }
 
   .pd-text h2{
     font-weight: lighter;
     display: flex;
     justify-content: center;
-    background-color:#160e0a;
   }
 
   .pd-text div {
@@ -76,8 +110,9 @@
     margin: 0 auto;
     display: block;
   cursor: pointer;
-  background-color:#160e0a;
-  color: #f4e8b3;
+  background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
+  color: #8e4212;
   font-family: 'Times New Roman', Times, serif;
   font-size:medium;
   font-weight:lighter;
@@ -85,4 +120,7 @@
   border: solid 0.01rem #0c0704;
   padding: 0.5rem;
   width: 10rem;
+  }
+  .pd-text:hover button {
+    background-color: #43210e72;
   }

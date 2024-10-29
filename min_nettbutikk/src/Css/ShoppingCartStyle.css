@@ -2,14 +2,30 @@
 .cartContainer {
     display: grid;
     justify-content: center;
-    background-color: #2c1e16;
+    text-align: center;
+    background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
     width: 22rem;
     height: 28rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
+    border: double 0.3rem #0c0704;
 }
 
 .cartHeader {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+button {
+  cursor: pointer;
+  background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
+  color: #8e4212;
+  font-family: 'Times New Roman', Times, serif;
+  font-size:medium;
+  font-weight:lighter;
+  border-radius: 0.3rem;
+  border: solid 0.01rem #0c0704;
+  margin: 0.5rem;
 }

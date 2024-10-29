@@ -10,7 +10,6 @@ function LoginSignup({ setIsLoggedIn }) {
   const [feedback, setFeedback] = useState('');
   const navigate = useNavigate();
 
-  // Handle login logic
   const handleLogin = async () => {
     try {
       const response = await fetch('http://localhost:5000/min-side', {
@@ -48,7 +47,7 @@ function LoginSignup({ setIsLoggedIn }) {
       });
 
       if (response.ok) {
-        setFeedback('Bruker opprettet! Du kan nå logge inn.');
+        setFeedback(' Bruker opprettet, du kan nå logge inn.');
         setAction('Logg inn'); 
       } else {
         const errorMessage = await response.text();

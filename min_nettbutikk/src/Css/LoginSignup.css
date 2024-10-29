@@ -1,12 +1,18 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    margin-top: 2rem;
-    background-color:#160e0a;
+    background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
     padding-bottom: 2rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
+    border: double 0.3rem #0c0704;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.container div {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .header {
@@ -18,7 +24,7 @@
 }
 
 .text {
-    color: #f4e8b3;
+    color: #8e4212;
     font-size: 1.5rem;
     font-weight: 100;
 }
@@ -36,7 +42,8 @@
     margin: 1rem;
     width: 30rem;
     height: 2rem;
-    background-color: #32201876;
+    background-color: #43210e72;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
     border-radius: 0.2rem;
 }
 
@@ -46,27 +53,32 @@
     background: transparent;
     border: none;
     outline: none;
-    color: #f4e8b3;
+    color: #8e4212;
     font-size: 1rem;
     padding: 1rem;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .input ::placeholder{
-    color: #f4e8b34a;
+    color: #8e421282;
 }
 
 .forgot-password {
+    display: flex;
+    justify-content: center;
     padding-left: 1rem;
     margin-top: 1rem;
-    color: #f4e8b3;
+    color: #8e4212;
     font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.forgot-password span {
-    color: #f4e8b34a;
+.forgot-password span 
+{   display: flex;
+    justify-content: center;
+    color: #8e421282;
     cursor: pointer;
+    padding-left: 0.3rem;
 }
 
 .submit-container {
@@ -83,7 +95,7 @@
     width: 7rem;
     height: 2rem;
     background-color: transparent;
-    color: #f4e8b34a;
+    color: #8e421282;
     border-radius: 0.2rem;
     border: solid 0.01rem #0c0704;
     font-size: 1rem;
@@ -92,6 +104,10 @@
 }
 
 .submit.active {
-    color: #f4e8b3;
-    background-color: #32201876;
+    color: #8e4212;
+    background-color: #22140b85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
 }
+.submit.active:hover {
+    background-color: #43210e72;
+  }
