@@ -44,20 +44,25 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
 }
 .topNav input {
-  background-color: #43210e72;
+  background-color: #22140b85;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
-  font-size: small;
+  font-size: medium;
   width: 8rem;
   border: #0c0704 solid 0.01rem;
   border-radius: 0.2rem;
   font-family: 'Times New Roman', Times, serif;
   color: #8e4212;
   outline: none;
+  padding: 0.4rem;
 }
 .topNav button {
   background-color: #22140b85;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
-  
+}
+.navRight {
+  display: flex;
+  align-items: center;
+  color: #8e4212;
 }
 
 .navBtn {
@@ -75,6 +80,7 @@
 .navBtn:hover {
   background-color: #43210e72;
 }
+
 
 
 .bottomNav {

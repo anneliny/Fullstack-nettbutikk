@@ -1,5 +1,6 @@
 .home-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 55.5rem;
     height: 30rem;
@@ -8,11 +9,11 @@
     width: 45%;
     margin:4rem;
     opacity: 80%;
-    border-radius: 20rem;
+    border-radius: 2rem;
     border: double 0.3rem #0c0704;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
   }
-.home-text {
+/* .home-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,4 +23,4 @@
     border-radius: 0.5rem;
     border: double 0.3rem #0c0704;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.545), 0 6px 20px 0 rgba(0, 0, 0, 0.704);
-}
+} */

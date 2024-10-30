@@ -49,16 +49,6 @@ app.get('/api/categories', (req, res) => {
   });
 });
 
-app.get('/api/products', (req, res) => {
-  const sql = 'SELECT * FROM products';
-  db.query(sql, (err, results) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.json(results);
-  });
-});
-
 app.get('/api/products/:product_id', (req, res) => {
   const { product_id } = req.params; 
   const sql = 'SELECT * FROM products WHERE product_id = ?';
@@ -74,6 +64,23 @@ app.get('/api/products/:product_id', (req, res) => {
 });
 
 const userDB = [];
+
+app.get('/api/products', (req, res) => {
+  const { name } = req.query;
+  const sql = name
+    ? 'SELECT * FROM products WHERE product_name LIKE ?'
+    : 'SELECT * FROM products';
+  const queryParams = name ? [`${name}%`] : [];
+
+  console.log('Starter SQL:', sql, 'med params:', queryParams);
+  db.query(sql, queryParams, (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(results);
+  });
+});
+
 
 app.post('/register', async (req, res) => {
   const {name, email, password} = req.body;

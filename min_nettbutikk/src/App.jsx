@@ -10,6 +10,7 @@ import MyPageLoggedIn from './Components/MyPageLoggedIn.jsx';
 import ProtectedRoute from './Components/ProtectedRoute.jsx';
 import ShoppingCart from './Components/ShoppingCart.jsx';
 import ProductList from './Components/ProductList.jsx';
+import Search from './Components/Search.jsx';
 
 function App() {
   document.title = "Floke & Flora";
@@ -50,11 +51,10 @@ function App() {
             )}
           </div>
           <div className='navRight'>
-            <input type="Search" name="inputSearch" />
-            <button className="navBtn">Søk</button>
             <Link to="/handlekurv">
             <button className="navBtn">Handlekurv ({cart.length})</button>
             </Link>
+            <Search/>
           </div>
         </nav>
 

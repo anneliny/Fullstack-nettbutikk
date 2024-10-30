@@ -5,7 +5,7 @@ function Home(){
 return (
     <div className="home-container">
         <img className="home-img" src={yarnbasket} alt='yarn basket'/>
-        <div className="home-text">Tekst</div>
+        <div className="home-text"></div>
     </div>
 )
 }
